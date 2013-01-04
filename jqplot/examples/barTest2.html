@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Bar Charts</title>
+    <link class="include" rel="stylesheet" type="text/css" href="../jquery.jqplot.min.css" />
+    <link rel="stylesheet" type="text/css" href="examples.min.css" />
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.min.css" />
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemejqPlot.min.css" />
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+    <script class="include" type="text/javascript" src="../jquery.min.js"></script>
+</head>
+<body>
+        
+    <div id="chart1" style="margin-top:20px; margin-left:20px; width:800px; height:600px;"></div>
+
+	<script class="code" type="text/javascript">
+	$(document).ready(function() {
+        $.jqplot.config.enablePlugins = true;
+		var s1 = [ ['19/5',93219],['20/5',93219],['21/5',209742],['22/5',318392],['23/5',434915],['24/5',551438],['25/5',669477],['26/5',763907],['27/5',763907],['28/5',876835],['29/5',1040798],['30/5',1209873],['31/5',1388262],['1/6',1558778],['2/6',1711314],['3/6',1711314],['4/6',1891763],['5/6',2072211],['6/6',2252660],['7/6',2433109],['8/6',2584770],['9/6',2737306],['10/6',2737306],['11/6',2927976],['12/6',3113536],['13/6',3304206],['14/6',3510550],['15/6',3688129],['16/6',3853204],['17/6',3853204],['18/6',4059548],['19/6',4265892],['20/6',4457841],['21/6',4653964],['22/6',4850086] ]
+		var s2 = [ ['19/5',0],['20/5',0],['21/5',488814],['22/5',660642],['23/5',660642],['24/5',743570],['25/5',912585],['26/5',912585],['27/5',912585],['28/5',1134049],['29/5',1979167],['30/5',2285510],['31/5',2373220],['1/6',2408507],['2/6',2408507],['3/6',2408507],['4/6',2657460],['5/6',2958574],['6/6',3242003],['7/6',3242003],['8/6',3242003],['9/6',3242003],['10/6',3242003],['11/6',3242003],['12/6',3242003],['13/6',3242003],['14/6',3242003],['15/6',3242003],['16/6',3242003],['17/6',3242003],['18/6',3242003],['19/6',3242003],['20/6',3242003],['21/6',3242003],['22/6',3242003] ]
+		var s3 = [ ['19/5',130340],['20/5',190160],['21/5',395950],['22/5',600530],['23/5',809830],['24/5',1010020],['25/5',1062360],['26/5',1076340],['27/5',1093120],['28/5',1109990],['29/5',1298550],['30/5',1498010],['31/5',1696000],['1/6',1892340],['2/6',2048560],['3/6',2115770],['4/6',2300220],['5/6',2496110],['6/6',2676910],['7/6',2874250],['8/6',3070515],['9/6',3229605],['10/6',3311315],['11/6',3500725],['12/6',3695005],['13/6',3895970],['14/6',4118700],['15/6',4295490],['16/6',4383240],['17/6',4463420],['18/6',4655510],['19/6',4655510],['20/6',4655510],['21/6',4655510],['22/6',4655510] ]
+		var s4 = [ ['19/5',168957],['20/5',236868],['21/5',445012],['22/5',665070],['23/5',883847],['24/5',1084399],['25/5',1132923],['26/5',1149534],['27/5',1166236],['28/5',1179926],['29/5',1368435],['30/5',1560731],['31/5',1757273],['1/6',1957300],['2/6',2128185],['3/6',2196829],['4/6',2381927],['5/6',2562779],['6/6',2727602],['7/6',2919665],['8/6',3109542],['9/6',3273358],['10/6',3347347],['11/6',3529932],['12/6',3719408],['13/6',3906757],['14/6',4098234],['15/6',4243548],['16/6',4322222],['17/6',4384651],['18/6',4552196],['19/6',4552196],['20/6',4552196],['21/6',4552196],['22/6',4552196] ]
+		var ticks = [ {label:'Call',pointLabels: { show: false },color:'#FF0000',renderer:$.jqplot.LineRenderer},{label:'Survey Cubes',pointLabels: { show: false },color:'#008000',renderer:$.jqplot.LineRenderer},{label:'Hour Cubes',pointLabels: { show: false },color:'#0000FF',renderer:$.jqplot.LineRenderer},{label:'Tally Cubes',pointLabels: { show: false },color:'#808080',renderer:$.jqplot.BarRenderer} ];
+		var plot1 = $.jqplot('chart1', [s1,s2,s3,s4], {
+			animate: !$.jqplot.use_excanvas,
+			seriesDefaults:{
+				renderer:eval($.jqplot.BarRenderer),
+				rendererOptions: { 
+					barMargin: 5 
+				} 
+			},
+			highlighter: {
+				lineWidthAdjust: 0,  
+				show: true,
+				fadeTooltip: false,
+				sizeAdjust: 0,
+				tooltipOffset: 0,
+				tooltipAxes: 'y'
+			},
+			cursor: {
+				show: false
+			},
+			series: ticks,
+			legend: {
+				show: true,
+				placement: 'outsideGrid',
+				location: 's',
+				pointLabels: { show:true }
+			},
+			axesDefaults: {        
+				tickRenderer: $.jqplot.CanvasAxisTickRenderer,        
+				tickOptions: {          
+					fontSize: '11pt'   
+				}    
+			},
+			axes: {
+				xaxis: {
+					renderer: $.jqplot.CategoryAxisRenderer,
+					tickOptions: {          
+						angle: -50
+					}    
+				},
+				yaxis: {
+					pad: 1.05,
+					min: 0,
+					max: 5820103.2
+				}
+			}
+		});
+	})
+</script>
+
+<!-- Don't touch this! -->
+
+
+    <script class="include" type="text/javascript" src="../jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+<!-- Additional plugins go here -->
+
+  <script class="include" type="text/javascript" src="../plugins/jqplot.barRenderer.min.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.pointLabels.min.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.canvasTextRenderer.min.js"></script>
+
+<!-- End additional plugins -->
+
+	<script type="text/javascript" src="example.min.js"></script>
+
+</body>
+
+
+</html>

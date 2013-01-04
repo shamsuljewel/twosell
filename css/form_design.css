@@ -1,0 +1,71 @@
+/* CSS Document */
+#form_id{
+	margin: 10px;
+	margin-top:20px;
+}
+fieldset {
+   padding: 0;
+}
+fieldset {
+  /*float: left;*/
+  clear: left;
+  width: 100%;
+  margin: 0 0 1.5em 0;
+}
+fieldset {
+  clear: both;
+  padding: 0;
+  border: 1px solid #BFBAB0;
+  background-color: #F2EFE9;
+}
+fieldset li {
+  float: left;
+  clear: left;
+  width: 100%;
+  padding-bottom: 1em;
+}
+legend {
+  margin-left: 1em;
+  color: #000000;
+  font-weight: bold;
+  padding: 0;
+}
+fieldset ol {
+  padding: 1em 1em 0 0;
+  list-style: none;
+  
+  margin:0;
+}
+fieldset li {
+  padding-bottom: 1em;
+  
+}
+fieldset.submit {
+  float: none;
+  width: auto;
+  border: 0 none #FFF;
+  padding-left: 12em;
+  border-style: none;
+  background-color: transparent;
+}
+label {
+  display: block;
+  float: left;
+  width: 10em;
+  
+  margin-right: 1em;
+  text-align: right;
+}
+.bold{
+	font-weight:bold;
+}
+.bigsize{
+	font-size:20px;
+}
+textarea{
+	background-color: #FFF;
+}
+.submit{
+	margin-left:250px;
+}
+.text{ width:550px }

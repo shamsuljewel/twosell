@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+
+RewriteCond %{HTTP} !=on
+RewriteRule ^(.*) http://admin.twosell.se/$1 [R=301,L]
+
+
+</IfModule>

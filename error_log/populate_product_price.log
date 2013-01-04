@@ -1,0 +1,7 @@
+[29-Nov-2012 18:39:22] Error: [1024] Total receipt: 5, Total Products: 13, Total New Product Inserted: 0, Total Taxrate Updated: 0, Total Price Updated: 11 on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 215
+[29-Nov-2012 18:40:42] Error: [1024] Duplicate entry '1' for key 'articlenum' on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 140
+[29-Nov-2012 18:46:47] Error: [1024] Duplicate entry '1' for key 'articlenum' on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 141
+[29-Nov-2012 18:48:14] Error: [1024] Duplicate entry '1' for key 'articlenum' on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 141
+[29-Nov-2012 18:57:23] Error: [1024] Duplicate entry '1' for key 'articlenum' on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 142
+[29-Nov-2012 18:58:47] Error: [1024] Duplicate entry '1' for key 'articlenum' on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 144
+[29-Nov-2012 19:21:27] Error: [1024] Total receipt: 201003, Total Products: 460399, Total New Product Inserted: 551, Total Taxrate Updated: 84, Total Price Updated: 106801 on C:\xampp\htdocs\twosell\script\populate_product_price.php at line 219
